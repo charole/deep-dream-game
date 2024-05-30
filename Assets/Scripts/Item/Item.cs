@@ -11,6 +11,12 @@ public class Item : MonoBehaviour
 	private void Awake()
 	{
 		movement2D = GetComponent<Movement2D>();
+		if (movement2D == null)
+		{
+			Debug.LogError("Movement2D 컴포넌트를 찾을 수 없습니다.");
+			return;
+		}
+
 		float x = Random.Range(-1f, 1f);
 		float y = Random.Range(-1f, 1f);
 
