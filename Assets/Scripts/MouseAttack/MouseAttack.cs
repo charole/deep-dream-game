@@ -7,7 +7,8 @@ public class MouseAttack : MonoBehaviour
 	private GameObject obstaclePrefab;
 	[SerializeField]
 	private GameObject previewPrefab;
-
+	[SerializeField]
+	private StageData stageData;
 	private GameObject previewInstance;
 
 	private void Start()
@@ -18,18 +19,19 @@ public class MouseAttack : MonoBehaviour
 
 	private void Update()
 	{
+		Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		mousePosition.z = 0f;
+		previewInstance.transform.position = mousePosition;
+
 		if (Input.GetMouseButtonDown(0))
 		{
-			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			mousePosition.z = 0f;
-			StartCoroutine(SpawnObstacle(mousePosition));
+			CreateObstacle(mousePosition);
 		}
 	}
 
-	private IEnumerator SpawnObstacle(Vector3 position)
+	private void CreateObstacle(Vector3 mousePosition)
 	{
-		GameObject obstacle = Instantiate(obstaclePrefab, position, Quaternion.identity);
-		yield return new WaitForSeconds(2f);
-		Destroy(obstacle);
+		Vector3 spawnPosition = new Vector3(mousePosition.x, stageData.LimitMax.y, 0);
+		GameObject obstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity); // 유령 객체를 스테이지 상단에서 생성
 	}
 }

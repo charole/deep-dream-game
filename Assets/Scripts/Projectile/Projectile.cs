@@ -12,5 +12,10 @@ public class Projectile : MonoBehaviour
 			collision.GetComponent<EnemyHP>().TakeDamage(damage);
 			Destroy(gameObject);
 		}
+		if (collision.CompareTag("Ghost"))
+		{
+			collision.GetComponent<GhostHP>().TakeDamage(damage);
+			Destroy(gameObject);
+		}
 	}
 }
