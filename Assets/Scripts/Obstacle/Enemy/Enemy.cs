@@ -37,15 +37,15 @@ public class Enemy : MonoBehaviour
 	private void SpawnItem()
 	{
 		int spawnItem = Random.Range(0, 100);
-		if (spawnItem < 10)
+		if (spawnItem < 0)
 		{
-			Instantiate(itemPrefabs[0], transform.position, Quaternion.identity);
+			Instantiate(itemPrefabs[0], transform.position, Quaternion.identity); //TODO: power up item 적용 여부 고민 중이라 0으로 설정
 		}
-		else if (spawnItem < 15)
+		else if (spawnItem < 3)
 		{
 			Instantiate(itemPrefabs[1], transform.position, Quaternion.identity);
 		}
-		else if (spawnItem < 30)
+		else if (spawnItem < 8)
 		{
 			Instantiate(itemPrefabs[2], transform.position, Quaternion.identity);
 		}

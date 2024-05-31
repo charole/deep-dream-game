@@ -14,6 +14,6 @@ public class PlayerScoreViewer : MonoBehaviour
 
 	private void Update()
 	{
-		textScore.text = "Score " + playerController.Score;
+		textScore.text = "점수 " + playerController.Score;
 	}
 }

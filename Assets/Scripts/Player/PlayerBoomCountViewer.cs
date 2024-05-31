@@ -14,6 +14,6 @@ public class PlayerBoomCountViewer : MonoBehaviour
 
 	private void Update()
 	{
-		textBoomCount.text = 'X' + weapon.BoomCount.ToString();
+		textBoomCount.text = weapon.BoomCount.ToString();
 	}
 }
