@@ -108,7 +108,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ghost_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 652
+        width: 214
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6416c1265e34d69a4e2684f00adcbc
+      internalID: 711981167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_1
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 664
+        width: 219
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbac02b667c4b4c0a97c9d4fc9c0f601
+      internalID: 1500972665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_2
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 651
+        width: 232
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841e7b22ba9bb42ac9954cb6f82abffa
+      internalID: -2014509584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 130
+        width: 262
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6754a9150fd74378a85260f5d756aef
+      internalID: 332718705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 130
+        width: 278
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172e124600f6746d8a9b3f571d1ed891
+      internalID: -1021182676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_8
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 129
+        width: 259
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5086ee9d9ec654115a0aabafa6feca6d
+      internalID: -729775581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +245,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ghost_0: 711981167
+      Ghost_1: 1500972665
+      Ghost_10: 22812119
+      Ghost_11: 1585985175
+      Ghost_2: -2014509584
+      Ghost_3: -1642763798
+      Ghost_4: 397737523
+      Ghost_5: -543104972
+      Ghost_6: 332718705
+      Ghost_7: -1021182676
+      Ghost_8: -729775581
+      Ghost_9: 436685708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
