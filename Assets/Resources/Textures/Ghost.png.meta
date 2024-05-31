@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2aec5dd3f68c74ad297b82c7cc21f4f0
+guid: fbfb111bbc65544f39d50d932cfa4594
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,70 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Enemy01_Idle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 93
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b570416fff224508af246183bd3c47b
-      internalID: -1977953735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy01_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 0
-        width: 108
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6891535a408c43a886c399c6d011399
-      internalID: -317337361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy01_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 0
-        width: 99
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16d0ac08da1e44811a17fd454acfc2a5
-      internalID: 747659465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -182,10 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Enemy01_Idle_0: -1977953735
-      Enemy01_Idle_1: -317337361
-      Enemy01_Idle_2: 747659465
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
