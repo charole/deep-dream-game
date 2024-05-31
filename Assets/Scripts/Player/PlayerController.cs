@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 	private Movement2D movement2D;
 	private Weapon weapon;
 	private Animator animator;
+    private float originalSpeed;
 
 	private int score;
 	public int Score
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
 		movement2D = GetComponent<Movement2D>();
 		weapon = GetComponent<Weapon>();
 		animator = GetComponent<Animator>();
+		originalSpeed = movement2D.moveSpeed;
 	}
 
 	void Update()
@@ -62,6 +64,18 @@ public class PlayerController : MonoBehaviour
 			Mathf.Clamp(transform.position.y, stageData.LimitMin.y, stageData.LimitMax.y),
 			transform.position.z
 		);
+	}
+
+	public void ReduceSpeed(float duration, float speed)
+	{
+		StartCoroutine(ReduceSpeedCoroutine(duration, speed));
+	}
+
+	private IEnumerator ReduceSpeedCoroutine(float duration, float speed)
+	{
+		movement2D.moveSpeed = speed;
+		yield return new WaitForSeconds(duration);
+		movement2D.moveSpeed = originalSpeed;
 	}
 
 	public void OnDie()
