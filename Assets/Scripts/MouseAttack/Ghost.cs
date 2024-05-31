@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
 	[SerializeField]
-	private int damage = 1;
+	private int damage = 3;
 	[SerializeField]
 	private GameObject explosionPrefab;
 	private GameObject playerObject;
@@ -19,7 +19,7 @@ public class Ghost : MonoBehaviour
 		Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 		if (notDamage == false)
 		{
-			playerObject.GetComponent<PlayerHP>().TakeDamage(3); // 플레이어 체력 감소
+			playerObject.GetComponent<PlayerHP>().TakeDamage(damage); // 플레이어 체력 감소
 		}
 		Destroy(gameObject);
 	}

@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 		if (collision.CompareTag("Player"))
 		{
 			collision.GetComponent<PlayerHP>().TakeDamage(damage);
+			playerController.ReduceSpeed(2f, 2.5f); // 2초 동안 이동 속도를 50%(2.5f)로 감소
 			OnDie();
 		}
 	}
