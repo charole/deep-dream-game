@@ -9,6 +9,7 @@ public class PreviewMouseAttack : MonoBehaviour
 	private void Awake()
 	{
 		previewInstance = Instantiate(obstaclePrefab);
+		SetPreviewVisibility(true);
 	}
 
 	private void Update()
@@ -16,5 +17,10 @@ public class PreviewMouseAttack : MonoBehaviour
 		Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePosition.z = 0f;
 		previewInstance.transform.position = mousePosition;
+	}
+
+	public void SetPreviewVisibility(bool isVisible)
+	{
+		previewInstance.SetActive(isVisible);
 	}
 }

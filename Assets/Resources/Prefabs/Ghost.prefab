@@ -171,9 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17225c2597c141ab86951f07d9fa19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
   explosionPrefab: {fileID: 443653445314069269, guid: 7e3e8e2f6ecdbb04a982af0a14f2d887, type: 3}
-  playerHP: {fileID: 0}
 --- !u!114 &-5373496779687306931
 MonoBehaviour:
   m_ObjectHideFlags: 0
