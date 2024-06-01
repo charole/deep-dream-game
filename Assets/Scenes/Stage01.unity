@@ -1680,8 +1680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 3323889536495026753, guid: a6ab4ce0929134d37831a1e16e457fc3, type: 3}
-  previewPrefab: {fileID: 1726459977}
   stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
+  previewMouseAttack: {fileID: 1726459978}
 --- !u!1 &1678143761
 GameObject:
   m_ObjectHideFlags: 0
