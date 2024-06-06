@@ -3,7 +3,7 @@ using UnityEngine;
 public class Meteorite : MonoBehaviour
 {
 	[SerializeField]
-	private float damage = 5;
+	private int damage = 2;
 	[SerializeField]
 	private GameObject explosionPrefab;
 
