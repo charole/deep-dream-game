@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3a8be7996e164c2e8bc7bfc942cb82e
+guid: 02c52aa18ef6a4e459860d7417ee8eac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Blanket_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 324
+        width: 325
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693724ba7a57446808f82699e8739bc4
+      internalID: 2123580335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blanket_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 318
+        width: 327
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdecf2bbe4a34873badc0f3b274f63a
+      internalID: 471768661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blanket_2
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 307
+        width: 339
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc759abde52a54c079556f5969e045ef
+      internalID: 214633024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blanket_0: 2123580335
+      Blanket_1: 471768661
+      Blanket_2: 214633024
+      Blanket_3: -1113006521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
