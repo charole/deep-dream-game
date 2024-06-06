@@ -4,13 +4,13 @@ using UnityEngine;
 public class PlayerHP : MonoBehaviour
 {
 	[SerializeField]
-	private float maxHP = 10;
-	private float currentHP;
+	private int maxHP = 10;
+	private int currentHP;
 	private SpriteRenderer spriteRenderer;
 	private PlayerController playerController;
 
-	public float MaxHP => maxHP;
-	public float CurrentHP 
+	public int MaxHP => maxHP;
+	public int CurrentHP 
 	{
 		set => currentHP = Mathf.Clamp(value, 0, maxHP);
 		get => currentHP;
@@ -23,7 +23,7 @@ public class PlayerHP : MonoBehaviour
 		playerController = GetComponent<PlayerController>();
 	}
 
-	public void TakeDamage(float damage)
+	public void TakeDamage(int damage)
 	{
 		currentHP -= damage;
 
