@@ -2155,7 +2155,7 @@ MonoBehaviour:
   previewMouseAttack: {fileID: 1726459978}
   attackTypeImage: {fileID: 1461995732}
   ghostSprite: {fileID: 711981167, guid: fbfb111bbc65544f39d50d932cfa4594, type: 3}
-  blanketSprite: {fileID: 21300000, guid: 05806b63f014ac3449ddae915b77a961, type: 3}
+  blanketSprite: {fileID: 2123580335, guid: 02c52aa18ef6a4e459860d7417ee8eac, type: 3}
   cooldownSlider: {fileID: 1667212225}
 --- !u!1 &1667212222
 GameObject:
@@ -2682,7 +2682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostPreviewPrefab: {fileID: 808265668404523561, guid: 014e159d401a9450aa8eed354a94a7ee, type: 3}
-  blanketPreviewPrefab: {fileID: 6276755649963134880, guid: e021b19c262004188bf417c7cceab2fa, type: 3}
+  blanketPreviewPrefab: {fileID: 4477795628086303624, guid: 48724e53e9d044e8bb64b7cb98a69984, type: 3}
   stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
 --- !u!4 &1726459979
 Transform:
