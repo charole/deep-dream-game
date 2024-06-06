@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class GhostHPViewer : MonoBehaviour
 {
-	private EnemyHP enemyHP;
+	private GhostHP ghostHP;
 	private Slider hpSlider;
 
-	public void Setup(EnemyHP enemyHP)
+	public void Setup(GhostHP ghostHP)
 	{
-		this.enemyHP = enemyHP;
+		this.ghostHP = ghostHP;
 		hpSlider = GetComponent<Slider>();
 	}
 
 	private void Update()
 	{
-		hpSlider.value = enemyHP.CurrentHP / enemyHP.MaxHP;
+		hpSlider.value = ghostHP.CurrentHP / ghostHP.MaxHP;
 	}
 }
