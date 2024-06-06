@@ -154,8 +154,8 @@ RectTransform:
   - {fileID: 767857162}
   m_Father: {fileID: 768145145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchorMin: {x: 0.25, y: 0}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.8720174, b: 0.18943575, a: 1}
+  m_Color: {r: 0.1432894, g: 0.8679245, b: 0.14945199, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1122,10 +1122,10 @@ RectTransform:
   - {fileID: 150492339}
   m_Father: {fileID: 257470121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -247.3}
-  m_SizeDelta: {x: -40, y: 40}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 420.3, y: -224.9}
+  m_SizeDelta: {x: 27.0299, y: 36.3339}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768145146
 MonoBehaviour:
@@ -1140,6 +1140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: {fileID: 244798168}
+  player: {fileID: 1693030549}
+  offset: {x: 0.3, y: 0, z: 0}
 --- !u!114 &768145147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1185,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 767857162}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -1535,7 +1537,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f4e2ef7296b4bcb4d90b242b913d1516, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b58c976635c34986b13cfc0a005b633, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1681,9 +1683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 3323889536495026753, guid: a6ab4ce0929134d37831a1e16e457fc3, type: 3}
+  ghostHPSliderPrefab: {fileID: 1349547408010957614, guid: a0d35750ce46a453985104868240bd9c, type: 3}
   stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
   previewMouseAttack: {fileID: 1726459978}
-  enemyHPSliderPrefab: {fileID: 1349547408010957614, guid: 2f74e98211a9c42ccb2b868157a8c01f, type: 3}
   canvasTransform: {fileID: 257470121}
 --- !u!1 &1693030549
 GameObject:
@@ -1883,9 +1885,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.5, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 4
 --- !u!114 &1693030557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,8 +2095,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 768145145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchorMin: {x: 0.25, y: 0}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
