@@ -6,20 +6,45 @@ public class Blanket : MonoBehaviour
   private bool playerInRange = false;
   private float timer = 0f;
   private GameObject player;
-  [SerializeField] private GameObject visionMaskPrefab; // 시야 제한을 위한 마스크 프리팹
-  private GameObject visionMaskInstance;
+  [SerializeField] private GameObject blackOverlayPrefab; // 검정색 오버레이 프리팹
+  private Transform canvasTransform; // CanvasBlackOverlay의 Transform
+  private GameObject blackOverlayInstance; // 검정색 오버레이 인스턴스
 
   private void Start()
   {
     Destroy(gameObject, 2f); // Blanket 오브젝트를 2초 뒤에 사라지게 함
+
+    // blackOverlayPrefab이 할당되었는지 확인
+    if (blackOverlayPrefab == null)
+    {
+      Debug.LogError("Black Overlay Prefab is not assigned in the inspector.");
+    }
+
+    // CanvasBlackOverlay를 찾아서 Transform을 설정
+    Canvas[] canvases = FindObjectsOfType<Canvas>();
+    foreach (Canvas canvas in canvases)
+    {
+      if (canvas.name == "CanvasBlackOverlay")
+      {
+        canvasTransform = canvas.transform;
+        break;
+      }
+    }
+
+    // canvasTransform이 할당되었는지 확인
+    if (canvasTransform == null)
+    {
+      Debug.LogError("CanvasBlackOverlay not found in the scene.");
+    }
   }
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.CompareTag("Player"))
+    if (other.CompareTag("Player") && blackOverlayInstance == null)
     {
       playerInRange = true;
       player = other.gameObject;
+      timer = 0f; // 타이머 초기화
     }
   }
 
@@ -29,19 +54,17 @@ public class Blanket : MonoBehaviour
     {
       playerInRange = false;
       timer = 0f;
-      DestroyVisionMask();
     }
   }
 
   private void Update()
   {
-    if (playerInRange)
+    if (playerInRange && blackOverlayInstance == null)
     {
       timer += Time.deltaTime;
       if (timer >= 1f)
       {
-        // 시야를 플레이어 주변만 보이게 하는 로직 추가
-        RestrictVision();
+        ActivateBlackOverlay();
       }
     }
     else
@@ -50,28 +73,13 @@ public class Blanket : MonoBehaviour
     }
   }
 
-  private void RestrictVision()
+  private void ActivateBlackOverlay()
   {
-    // 시야를 플레이어 주변만 보이게 하는 로직 구현
-    if (player == null)
+    if (blackOverlayPrefab != null && canvasTransform != null)
     {
-      Debug.LogError("Player is not assigned.");
-      return;
-    }
-
-    if (visionMaskInstance == null)
-    {
-      visionMaskInstance = Instantiate(visionMaskPrefab, player.transform.position, Quaternion.identity);
-      visionMaskInstance.transform.SetParent(player.transform);
-    }
-  }
-
-  private void DestroyVisionMask()
-  {
-    if (visionMaskInstance != null)
-    {
-      Destroy(visionMaskInstance);
-      visionMaskInstance = null;
+      blackOverlayInstance = Instantiate(blackOverlayPrefab, canvasTransform); // 캔버스의 자식으로 생성
+      blackOverlayInstance.transform.localScale = Vector3.one; // 스케일 초기화
+      blackOverlayInstance.GetComponent<BlackOverlay>().Initialize(player.transform, player.GetComponent<SpriteRenderer>());
     }
   }
 }
