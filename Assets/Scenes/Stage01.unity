@@ -2937,6 +2937,8 @@ MonoBehaviour:
   blanketPreviewPrefab: {fileID: 4477795628086303624, guid: 48724e53e9d044e8bb64b7cb98a69984, type: 3}
   witchPreviewPrefab: {fileID: 5704627874168940023, guid: 474c8c61d019742c5b0bc0bc856cb9cf, type: 3}
   stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
+  verticalAlertLinePrefab: {fileID: 2842767937876120093, guid: 0686bbf8022aa446696061720cec46f4, type: 3}
+  horizontalAlertLinePrefab: {fileID: 2842767937876120093, guid: 906f6e889068240e2b91c95b0aa43fc0, type: 3}
 --- !u!4 &1726459979
 Transform:
   m_ObjectHideFlags: 0
