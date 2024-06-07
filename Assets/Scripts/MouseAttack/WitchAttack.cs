@@ -9,8 +9,7 @@ public class WitchAttack : MonoBehaviour
   private StageData stageData;
   [SerializeField]
   private float cooldownTime = 3f; // 쿨타임 설정
-  [SerializeField]
-  private Transform canvasTransform; // Canvas의 Transform
+  // canvasTransform 필드는 제거
 
   private bool isCooldown = false;
   private float cooldownProgress = 1f; // 초기값을 1로 설정하여 슬라이더가 꽉 찬 상태로 시작
@@ -40,7 +39,7 @@ public class WitchAttack : MonoBehaviour
       moveDirection = Vector3.left;
     }
 
-    GameObject witch = Instantiate(witchPrefab, spawnPosition, Quaternion.identity, canvasTransform);
+    GameObject witch = Instantiate(witchPrefab, spawnPosition, Quaternion.identity);
     witch.GetComponent<Movement2D>().MoveTo(moveDirection);
 
     // Witch의 SpriteRenderer를 좌우 반전
