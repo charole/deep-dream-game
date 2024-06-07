@@ -79,7 +79,7 @@ public class Blanket : MonoBehaviour
     {
       blackOverlayInstance = Instantiate(blackOverlayPrefab, canvasTransform); // 캔버스의 자식으로 생성
       blackOverlayInstance.transform.localScale = Vector3.one; // 스케일 초기화
-      blackOverlayInstance.GetComponent<BlackOverlay>().Initialize(player.transform, player.GetComponent<SpriteRenderer>());
+      blackOverlayInstance.GetComponent<BlackOverlay>().SetPlayer(player.transform);
     }
   }
 }
