@@ -4,7 +4,7 @@ using UnityEngine;
 public class GhostHP : MonoBehaviour
 {
 	[SerializeField]
-	private float maxHP = 10;
+	private float maxHP = 8;
 	private float currentHP;
 	private Ghost ghost;
 	private SpriteRenderer spriteRenderer;

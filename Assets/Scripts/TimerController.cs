@@ -9,7 +9,7 @@ public class TimerController : MonoBehaviour
   [SerializeField]
   private string clearSceneName = "GameClearScene"; // 게임 클리어 씬 이름
 
-  private float timeRemaining = 300f; // 5분 (300초)
+  private float timeRemaining = 180f; // 3분 (180초)
   private bool timerIsRunning = false;
 
   private void Start()
