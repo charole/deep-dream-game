@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB0A8\uC740\uC2DC\uAC04 5:00"
+  m_text: "\uB0A8\uC740\uC2DC\uAC04 3:00"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27e69502a6c3c42119e7dd9427355cc3, type: 2}
   m_sharedMaterial: {fileID: -6612419966400805668, guid: 27e69502a6c3c42119e7dd9427355cc3, type: 2}
@@ -1493,6 +1493,54 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1218513451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218513453}
+  - component: {fileID: 1218513452}
+  m_Layer: 0
+  m_Name: WitchAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1218513452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218513451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b23a6514e44404097477423a2f010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  witchPrefab: {fileID: 5704627874168940023, guid: e160356cec3a14c0ea467092ac8fc677, type: 3}
+  stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
+  cooldownTime: 3
+  canvasTransform: {fileID: 257470121}
+--- !u!4 &1218513453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218513451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.049227715, y: 2.7591624, z: 0.016680017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2354,10 +2402,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostAttack: {fileID: 712883241}
   blanketAttack: {fileID: 1496972243}
+  witchAttack: {fileID: 1218513452}
   previewMouseAttack: {fileID: 1726459978}
   attackTypeImage: {fileID: 1461995732}
   ghostSprite: {fileID: 711981167, guid: fbfb111bbc65544f39d50d932cfa4594, type: 3}
   blanketSprite: {fileID: 21300000, guid: b5a7d46bc020a400bb1791c133b36102, type: 3}
+  witchSprite: {fileID: 21300000, guid: b17622212c1cf431c90b7adcd50b2e7f, type: 3}
   cooldownSlider: {fileID: 1667212225}
 --- !u!1 &1667212222
 GameObject:
@@ -2885,6 +2935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostPreviewPrefab: {fileID: 808265668404523561, guid: 014e159d401a9450aa8eed354a94a7ee, type: 3}
   blanketPreviewPrefab: {fileID: 4477795628086303624, guid: 48724e53e9d044e8bb64b7cb98a69984, type: 3}
+  witchPreviewPrefab: {fileID: 5704627874168940023, guid: 474c8c61d019742c5b0bc0bc856cb9cf, type: 3}
   stageData: {fileID: 11400000, guid: 5aa899759b9e84989bca2d3a2679750f, type: 2}
 --- !u!4 &1726459979
 Transform:
@@ -3146,4 +3197,5 @@ SceneRoots:
   - {fileID: 1726459979}
   - {fileID: 712883242}
   - {fileID: 1496972242}
+  - {fileID: 1218513453}
   - {fileID: 1638219244}

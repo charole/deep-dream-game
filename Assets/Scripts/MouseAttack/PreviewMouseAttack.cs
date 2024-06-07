@@ -7,9 +7,11 @@ public class PreviewMouseAttack : MonoBehaviour
   [SerializeField]
   private GameObject blanketPreviewPrefab;
   [SerializeField]
+  private GameObject witchPreviewPrefab; // Witch 프리뷰 추가
+  [SerializeField]
   private StageData stageData; // StageData 참조 추가
   private GameObject previewInstance;
-  private bool isGhostPreview; // 유령 프리뷰 여부를 나타내는 플래그
+  private AttackType currentAttackType;
 
   private void Awake()
   {
@@ -21,14 +23,24 @@ public class PreviewMouseAttack : MonoBehaviour
     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     mousePosition.z = 0f;
 
-    // 유령 프리뷰의 경우 y 좌표를 고정
-    if (isGhostPreview)
-    {
-      mousePosition.y = stageData.LimitMax.y - 0.2f;
-    }
-
     if (previewInstance != null)
     {
+      switch (currentAttackType)
+      {
+        case AttackType.Ghost:
+          // Ghost 프리뷰의 경우 y 좌표를 고정
+          mousePosition.y = stageData.LimitMax.y - 0.2f;
+          break;
+        case AttackType.Witch:
+          // Witch 프리뷰의 경우 x 좌표를 고정하고 좌우 반전 적용
+          mousePosition.x = mousePosition.x < Camera.main.transform.position.x ? stageData.LimitMin.x : stageData.LimitMax.x;
+          SpriteRenderer previewSpriteRenderer = previewInstance.GetComponent<SpriteRenderer>();
+          if (previewSpriteRenderer != null)
+          {
+            previewSpriteRenderer.flipX = mousePosition.x == stageData.LimitMin.x;
+          }
+          break;
+      }
       previewInstance.transform.position = mousePosition;
     }
   }
@@ -40,15 +52,18 @@ public class PreviewMouseAttack : MonoBehaviour
       Destroy(previewInstance);
     }
 
+    currentAttackType = attackType;
+
     switch (attackType)
     {
       case AttackType.Ghost:
         previewInstance = Instantiate(ghostPreviewPrefab);
-        isGhostPreview = true;
         break;
       case AttackType.Blanket:
         previewInstance = Instantiate(blanketPreviewPrefab);
-        isGhostPreview = false;
+        break;
+      case AttackType.Witch:
+        previewInstance = Instantiate(witchPreviewPrefab); // Witch 프리뷰 인스턴스 생성
         break;
     }
 

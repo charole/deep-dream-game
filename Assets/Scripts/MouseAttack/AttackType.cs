@@ -1,5 +1,6 @@
 public enum AttackType
 {
-	Ghost,
-	Blanket
+  Ghost,
+  Blanket,
+  Witch
 }
