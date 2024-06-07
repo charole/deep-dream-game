@@ -10,7 +10,13 @@ public class PreviewMouseAttack : MonoBehaviour
   private GameObject witchPreviewPrefab; // Witch 프리뷰 추가
   [SerializeField]
   private StageData stageData; // StageData 참조 추가
+  [SerializeField]
+  private GameObject verticalAlertLinePrefab; // 세로 가이드라인 프리팹
+  [SerializeField]
+  private GameObject horizontalAlertLinePrefab; // 가로 가이드라인 프리팹
+
   private GameObject previewInstance;
+  private GameObject alertLineInstance;
   private AttackType currentAttackType;
 
   private void Awake()
@@ -30,6 +36,7 @@ public class PreviewMouseAttack : MonoBehaviour
         case AttackType.Ghost:
           // Ghost 프리뷰의 경우 y 좌표를 고정
           mousePosition.y = stageData.LimitMax.y - 0.2f;
+          UpdateAlertLine(mousePosition, true);
           break;
         case AttackType.Witch:
           // Witch 프리뷰의 경우 x 좌표를 고정하고 좌우 반전 적용
@@ -39,6 +46,10 @@ public class PreviewMouseAttack : MonoBehaviour
           {
             previewSpriteRenderer.flipX = mousePosition.x == stageData.LimitMin.x;
           }
+          UpdateAlertLine(mousePosition, false);
+          break;
+        default:
+          DestroyAlertLine();
           break;
       }
       previewInstance.transform.position = mousePosition;
@@ -51,6 +62,7 @@ public class PreviewMouseAttack : MonoBehaviour
     {
       Destroy(previewInstance);
     }
+    DestroyAlertLine();
 
     currentAttackType = attackType;
 
@@ -75,6 +87,30 @@ public class PreviewMouseAttack : MonoBehaviour
     if (previewInstance != null)
     {
       previewInstance.SetActive(isVisible);
+    }
+    if (alertLineInstance != null)
+    {
+      alertLineInstance.SetActive(isVisible);
+    }
+  }
+
+  private void UpdateAlertLine(Vector3 position, bool isVertical)
+  {
+    if (alertLineInstance == null)
+    {
+      alertLineInstance = Instantiate(isVertical ? verticalAlertLinePrefab : horizontalAlertLinePrefab);
+    }
+
+    alertLineInstance.transform.position = position;
+    alertLineInstance.SetActive(true);
+  }
+
+  private void DestroyAlertLine()
+  {
+    if (alertLineInstance != null)
+    {
+      Destroy(alertLineInstance);
+      alertLineInstance = null;
     }
   }
 }
