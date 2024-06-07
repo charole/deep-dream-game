@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyHP : MonoBehaviour
 {
 	[SerializeField]
-	private float maxHP = 4;
+	private float maxHP = 3;
 	private float currentHP;
 	private Enemy enemy;
 	private SpriteRenderer spriteRenderer;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2910cff206a4a4117823813e983c53f6
+guid: 3908ecc261c1b4531af4ad762cb0b992
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,91 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: PlayerBoom_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 75
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdaba3fd736f841cfaa1267a3f087645
-      internalID: 1832204611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerBoom_1
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 75
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94cd39335df64451194d7a3ea0472006
-      internalID: 466208439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerBoom_2
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 0
-        width: 75
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 797afa802957c413586ec7db177b8ecf
-      internalID: -86914159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerBoom_3
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 0
-        width: 75
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd761e7a85caa4f23972aa9b60e15475
-      internalID: -1994289814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -203,11 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      PlayerBoom_0: 1832204611
-      PlayerBoom_1: 466208439
-      PlayerBoom_2: -86914159
-      PlayerBoom_3: -1994289814
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
