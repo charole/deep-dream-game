@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a469de451f24c3592668e6dbe0815b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackOverlayPrefab: {fileID: 1112092068244546521, guid: 3add04569e4dc4a739367451c8b1f5f2, type: 3}
 --- !u!58 &9017088481837991691
 CircleCollider2D:
   m_ObjectHideFlags: 0
