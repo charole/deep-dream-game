@@ -8,6 +8,7 @@ public class TimerController : MonoBehaviour
   private TextMeshProUGUI timerText; // TextMeshProUGUI 사용
   [SerializeField]
   private string clearSceneName = "GameClearScene"; // 게임 클리어 씬 이름
+  private PlayerController playerController; // PlayerController 참조 추가
 
   private float timeRemaining = 180f; // 3분 (180초)
   private bool timerIsRunning = false;
@@ -16,6 +17,9 @@ public class TimerController : MonoBehaviour
   {
     timerIsRunning = true;
     UpdateTimerText();
+
+    // PlayerController를 찾아서 할당
+    playerController = FindObjectOfType<PlayerController>();
   }
 
   private void Update()
@@ -45,6 +49,16 @@ public class TimerController : MonoBehaviour
 
   private void GameClear()
   {
-    SceneManager.LoadScene(clearSceneName);
+    // PlayerController의 OnClearEvent 호출
+    if (playerController != null)
+    {
+      playerController.OnClearEvent();
+      SceneManager.LoadScene(clearSceneName);
+    }
+    else
+    {
+      // PlayerController가 설정되지 않은 경우 직접 씬 로드
+      SceneManager.LoadScene(clearSceneName);
+    }
   }
 }
