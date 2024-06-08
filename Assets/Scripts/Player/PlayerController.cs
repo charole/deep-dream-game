@@ -91,4 +91,9 @@ public class PlayerController : MonoBehaviour
 		PlayerPrefs.SetInt("Score", score);
 		SceneManager.LoadScene(nextSceneName);
 	}
+
+	public void OnClearEvent()
+	{
+		PlayerPrefs.SetInt("Score", score);
+	}
 }
